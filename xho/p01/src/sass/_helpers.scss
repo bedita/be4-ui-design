@@ -1,0 +1,43 @@
+*[contenteditable], input[type=text], textarea {
+    -webkit-user-select: auto !important;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.helper-noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.helper-hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.helper-transparent {
+    opacity: 0;
+}
+
+.helper-full-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.helper-full-space {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}

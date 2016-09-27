@@ -1,0 +1,56 @@
+.be4ui-body {
+    padding: 0 1em;
+    margin: 3em 0 1em;
+    display: flex;
+
+    .be4ui-body-view {
+        margin-left: 4em;
+        flex-grow: 2;
+
+        > header {
+            margin-bottom: 1em;
+        }
+
+        .body-view-element {
+            > header {
+                border-bottom: 1px solid $labelBgColor;
+            }
+
+            label {
+                background-color: $labelBgColor;
+                color: #fff;
+                padding: .125em .5em;
+                font-size: .875em;
+            }
+        }
+    }
+}
+
+.be4ui-body-title {
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+.be4ui-body-toolbar {
+    display: flex;
+    flex-direction: column;
+
+    .be4ui-button {
+        margin-bottom: 1em;
+    }
+}
+
+.be4ui-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: #222;
+    color: #fff;
+    margin-right: .5em;
+    line-height: 2em;
+    cursor: pointer;
+}
+

@@ -1,0 +1,42 @@
+/*! ==========================================================================
+    ChannelWeb srl - xho - Bologna
+    Footygangs CSS
+    team: Christiano Presutti, Alberto Pagliarini
+    ==========================================================================
+*/
+
+/* =========================================================================
+   Variables
+   ========================================================================= */
+
+// Palette
+$mainBgColor: #fff;
+$mainFgColor: #222;
+$labelBgColor: rgb(252, 115, 34);
+$ff: 'Lato', sans-serif;
+
+
+// media queries
+// $media-landscape: "only screen and (orientation:landscape)";
+// $media-ipadh: "only screen and (min-width : 1024px)";
+// $media-under-ipad: "only screen and (max-width : 768px) and (orientation: portrait)";
+// $media-bigphone: "only screen and (max-width: 479px)";
+// $media-bigphone-h: "only screen and (max-width: 767px) and (orientation: landscape)";
+// $media-phone: "only screen and (max-width: 400px)";
+
+
+
+/* =========================================================================
+   Files
+   ========================================================================= */
+
+// js libs & fonts
+
+
+// be4ui
+@import "base";
+@import "helpers";
+@import "fonts";
+@import "layout";
+@import "body";
+@import "print";

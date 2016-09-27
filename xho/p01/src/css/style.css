@@ -1,0 +1,300 @@
+/*! ==========================================================================
+    ChannelWeb srl - xho - Bologna
+    Footygangs CSS
+    team: Christiano Presutti, Alberto Pagliarini
+    ==========================================================================
+*/
+/* =========================================================================
+   Variables
+   ========================================================================= */
+/* =========================================================================
+   Files
+   ========================================================================= */
+* {
+  outline: none; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+fieldset, figure, h1, h2, h3, p {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+b, strong {
+  font-weight: 400; }
+
+em {
+  font-style: italic; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #C10101; }
+
+*[contenteditable], input[type=text], textarea {
+  -webkit-user-select: auto !important; }
+
+.clearfix:after {
+  clear: both; }
+
+.helper-noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.helper-hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.helper-transparent {
+  opacity: 0; }
+
+.helper-full-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+.helper-full-space {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* lato-300 - latin_latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/lato-v11-latin_latin-ext-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/lato-v11-latin_latin-ext-300.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v11-latin_latin-ext-300.woff2") format("woff2"), url("../fonts/lato-v11-latin_latin-ext-300.woff") format("woff"), url("../fonts/lato-v11-latin_latin-ext-300.ttf") format("truetype"), url("../fonts/lato-v11-latin_latin-ext-300.svg#Lato") format("svg");
+  /* Legacy iOS */ }
+
+/* lato-300italic - latin_latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/lato-v11-latin_latin-ext-300italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url("../fonts/lato-v11-latin_latin-ext-300italic.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v11-latin_latin-ext-300italic.woff2") format("woff2"), url("../fonts/lato-v11-latin_latin-ext-300italic.woff") format("woff"), url("../fonts/lato-v11-latin_latin-ext-300italic.ttf") format("truetype"), url("../fonts/lato-v11-latin_latin-ext-300italic.svg#Lato") format("svg");
+  /* Legacy iOS */ }
+
+/* lato-regular - latin_latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v11-latin_latin-ext-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/lato-v11-latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v11-latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/lato-v11-latin_latin-ext-regular.woff") format("woff"), url("../fonts/lato-v11-latin_latin-ext-regular.ttf") format("truetype"), url("../fonts/lato-v11-latin_latin-ext-regular.svg#Lato") format("svg");
+  /* Legacy iOS */ }
+
+/* lato-italic - latin_latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/lato-v11-latin_latin-ext-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Italic"), local("Lato-Italic"), url("../fonts/lato-v11-latin_latin-ext-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v11-latin_latin-ext-italic.woff2") format("woff2"), url("../fonts/lato-v11-latin_latin-ext-italic.woff") format("woff"), url("../fonts/lato-v11-latin_latin-ext-italic.ttf") format("truetype"), url("../fonts/lato-v11-latin_latin-ext-italic.svg#Lato") format("svg");
+  /* Legacy iOS */ }
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+html {
+  font-size: 1em;
+  line-height: 1.4;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  height: 100%; }
+
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  overflow: hidden;
+  /* safari 9+ only */ }
+  @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+    body {
+      font-weight: 400; } }
+
+/* MAIN */
+.be4ui-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%; }
+  .be4ui-main-container .be4ui-body {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+  .be4ui-main-container .be4ui-main-header, .be4ui-main-container .be4ui-main-footer {
+    font-size: .875em;
+    background-color: #fff; }
+    .be4ui-main-container .be4ui-main-header label, .be4ui-main-container .be4ui-main-footer label {
+      display: block;
+      padding: .5em 1em; }
+    .be4ui-main-container .be4ui-main-header .be4ui-module-label, .be4ui-main-container .be4ui-main-footer .be4ui-module-label {
+      display: inline-block;
+      background-color: #fc7322;
+      color: #fff; }
+  .be4ui-main-container .be4ui-main-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.25); }
+    .be4ui-main-container .be4ui-main-header .be4ui-header-toolbar {
+      padding: .5em;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2; }
+  .be4ui-main-container .be4ui-main-footer {
+    background-color: #666362;
+    color: #999; }
+
+.be4ui-body {
+  padding: 0 1em;
+  margin: 3em 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .be4ui-body .be4ui-body-view {
+    margin-left: 4em;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+    .be4ui-body .be4ui-body-view > header {
+      margin-bottom: 1em; }
+    .be4ui-body .be4ui-body-view .body-view-element > header {
+      border-bottom: 1px solid #fc7322; }
+    .be4ui-body .be4ui-body-view .body-view-element label {
+      background-color: #fc7322;
+      color: #fff;
+      padding: .125em .5em;
+      font-size: .875em; }
+
+.be4ui-body-title {
+  font-size: 1.25em;
+  font-weight: normal; }
+
+.be4ui-body-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .be4ui-body-toolbar .be4ui-button {
+    margin-bottom: 1em; }
+
+.be4ui-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: #222;
+  color: #fff;
+  margin-right: .5em;
+  line-height: 2em;
+  cursor: pointer; }
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=style.css.map */
