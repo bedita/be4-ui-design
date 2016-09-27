@@ -3,6 +3,7 @@
 <head>
     <title>BE4 prototypes</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="myInclude.js"></script>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
     </header>
     
     <section class="be4ui-body">
-        <?php include('body.php'); ?>
+        <include src="body.php"></include>
     </section>
 
     <footer class="be4ui-main-footer">
@@ -23,5 +24,6 @@
     </footer>
 </div>
 
+<script> window.onload = myInclude(); </script>
 </body>
 </html>
