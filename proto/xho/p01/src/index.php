@@ -16,7 +16,7 @@
     </header>
     
     <section class="be4ui-body">
-        <include src="body.php"></include>
+        <include src="body.php">
     </section>
 
     <footer class="be4ui-main-footer">

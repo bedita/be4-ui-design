@@ -11,6 +11,6 @@
 
     <article>
         ROBBE TABBATE A SEGUIRE<br><br>
-        <include src="elements/body-element-1.html"></include>
+        <include src="elements/body-element-1.html">
     </article>
 </div>
