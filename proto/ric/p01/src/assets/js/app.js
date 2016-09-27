@@ -26,7 +26,7 @@ $('.js-body-overlay').click(function(){
 
 $('.pubb-panel__link').click(function(){
     $('.js-pubb-details').addClass('is-visible');
-    $('.js-pubb-details').html($(this).html() + "<br> <small>Impostazioni</small>");
+    $('.js-pubb-details').html($(this).html() + "<br> <small>Impostazioni di sezione (nome, proprietà, contenuti...)</small>");
 });
 
 $('.js-nav-bar').mouseenter(function(){
@@ -56,6 +56,3 @@ $('#checkbox42').change(function(){
 $('#checkbox52').change(function(){
   $('.contents__item.content--media').toggle(this.checked);
 });
-
-
-

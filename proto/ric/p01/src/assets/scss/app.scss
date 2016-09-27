@@ -50,6 +50,30 @@
 @include motion-ui-animations;
 
 
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.fieldset legend {
+    background: transparent !important;
+}
+
 $transition-all: all 250ms ease-in-out;
 
 .body-overlay {
@@ -80,15 +104,24 @@ a {
     background: map-get($foundation-palette, primary);
     transition: 250ms ease-in-out;
     z-index: 30;
+    overflow: hidden;
     a {
         padding: $global-padding / 2 0 !important;
+        width: 200px;
         overflow: hidden;
-        text-overflow: ellipsis;
+        //text-overflow: ellipsis;
         color: $white;
+    }
+    span {
+        opacity: 0;
+        transition: $transition-all;
     }
 }
 .nav-bar--expanded {
-    width: 140px;
+    width: 180px;
+    span {
+        opacity: 1;
+    }
 }
 .main-area {
     height: 100vh;
@@ -139,6 +172,10 @@ a {
         transform: translateX(0);
     }
 }
+.contents-header {
+    margin-bottom: $global-margin;
+    border-bottom: 1px solid;
+}
 .contents__list {
     margin: 0;
     padding: 0;
@@ -148,11 +185,14 @@ a {
     padding: $global-padding / 2;
     background: $white;
     border-bottom: 1px solid $light-gray;
+    a {
+        color: $black;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
     &.content--doc { border-left: 4px solid #F57C00; }
     &.content--news { border-left: 4px solid #303F9F; }
     &.content--event { border-left: 4px solid #29B6F6; }
     &.content--media { border-left: 4px solid #E53935; }
 }
-
-
-

@@ -1,7 +1,7 @@
 <div class="contents">
   <h1>Contenuti</h1>
   <div class="row">
-    <fieldset>
+    <fieldset class="fieldset">
       <legend>Tipologia di contenuto</legend>
 <!--
       <input id="checkbox12" type="checkbox" checked>
@@ -17,13 +17,41 @@
       <label for="checkbox52">Multimedia</label>
     </fieldset>
   </div>
+  <div class="row collapse">
+      <div class="small-5 columns">
+          <label>Posizione
+              <select>
+                <option value="husker">Tutte le pubblicazioni</option>
+                <option value="husker">Alice nel paese delle meraviglie</option>
+                <option value="starbuck">Il GGG</option>
+                <option value="hotdog">Sito La Casa di Giovanni</option>
+                <option value="apollo">Calendario San Giacomo 2017</option>
+              </select>
+          </label>
+      </div>
+      <div class="small-5 columns">
+      <label for="contents-search" class="text-left">Cerca una parola</label>
+      <div class="input-group">
+          <!-- <span class="input-group-label">Cerca</span> -->
+          <input class="input-group-field" type="text" id="contents-search">
+          <div class="input-group-button">
+              <input type="submit" class="button" value="Cerca">
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="contents-header">
+      Titolo
+  </div>
+
   <ul class="contents__list">
-    <li class="contents__item content--doc">Il Bianconiglio non è mai esistito</li>
-    <li class="contents__item content--doc">Prefazione alla versione italiana</li>
-    <li class="contents__item content--news">Esce oggi il nuovo bando</li>
-    <li class="contents__item content--event">Festival in piazza</li>
-    <li class="contents__item content--news">Da domani le bollette si trovano online!</li>
-    <li class="contents__item content--news">Sciopero CGIL</li>
-    <li class="contents__item content--media">merged_document_vinilificio-9dad9a.jpg</li>
+    <li class="contents__item content--doc"><a href="#">Il Bianconiglio non è mai esistito</a></li>
+    <li class="contents__item content--doc"><a href="#">Prefazione alla versione italiana</a></li>
+    <li class="contents__item content--news"><a href="#">Esce oggi il nuovo bando</a></li>
+    <li class="contents__item content--event"><a href="#">Festival in piazza</a></li>
+    <li class="contents__item content--news"><a href="#">Da domani le bollette si trovano online!</a></li>
+    <li class="contents__item content--news"><a href="#">Sciopero CGIL</a></li>
+    <li class="contents__item content--media"><a href="#">merged_document_vinilificio-9dad9a.jpg</a></li>
   </ul>
 </div>
