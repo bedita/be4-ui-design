@@ -1,2 +1,5 @@
-# be4-ui-design
-crea una cartella con il tuo nome in `/proto` e inserisci i tuoi prototipi in cartelle con numero progressivo con nome `p{numero-a-due-cifre}`
+# BEdita 4 UI design prototypes
+Collection of prototypes for UI of upcoming BEdita major release.
+
+## Contributing
+Create a new folder inside `/proto` with your nickname. Within that folder, add your prototypes in folders named with an incremental index: `p{two-digit-number}` (e.g.: `/proto/myNickname/p01`).
