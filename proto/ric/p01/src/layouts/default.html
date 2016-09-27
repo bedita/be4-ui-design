@@ -1,0 +1,80 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+    <div class="row expanded">
+        <div class="nav-bar small-1 columns js-nav-bar">
+            <ul class="menu vertical">
+                <li><a href="#" class="js-pubb-link">Pubblicazioni</a></li>
+                <li><a href="/">Contenuti</a></li>
+                <li><a href="/admin.html">Admin</a></li>
+            </ul>
+        </div>
+        <div class="pubb-panel js-pubb-panel">
+            <ul class="vertical menu" data-accordion-menu>
+              <li class="pubb-panel__item">
+                  <a href="#"><span class="pubb-panel__link">Alice nel paese delle meraviglie</span></a>
+                <ul class="menu vertical nested">
+                  <li>
+                      <a href="#"><span class="pubb-panel__link">Introduzione</span></a>
+                      <ul class="menu vertical nested">
+                          <li><a href="#"><span class="pubb-panel__link">Prefazione</span></a></li>
+                          <li><a href="#"><span class="pubb-panel__link">Accorgimenti</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#"><span class="pubb-panel__link">Capitolo 1</span></a></li>
+                  <li><a href="#"><span class="pubb-panel__link">Capitolo 2</span></a></li>
+                  <li><a href="#"><span class="pubb-panel__link">Capitolo 3</span></a></li>
+                    <li><a href="#"><span class="pubb-panel__link">Capitolo 4</span></a></li>
+                    <li><a href="#"><span class="pubb-panel__link">Conclusione</span></a></li>
+                </ul>
+              </li>
+                      <li class="pubb-panel__item"><a href="#"><span class="pubb-panel__link">Il GGG</span></a></li>
+              <li class="pubb-panel__item">
+                  <a href="#"><span class="pubb-panel__link">Sito La Casa di Giovanni</span></a>
+                  <ul class="menu vertical nested">
+                      <li><a href="#"><span class="pubb-panel__link">Home</span></a></li>
+                      <li><a href="#"><span class="pubb-panel__link">Presentazione</span></a></li>
+                      <li><a href="#"><span class="pubb-panel__link">Che poi non ci abito neanche io</span></a></li>
+                      <li><a href="#"><span class="pubb-panel__link">Sempre sporca tutto l'anno</span></a></li>
+                  </ul>
+                </li>
+              <li class="pubb-panel__item">
+                  <a href="#"><span class="pubb-panel__link">Calendario San Giacomo 2017</span></a>
+                  <ul class="menu vertical nested">
+                      <li><a href="#"><span class="pubb-panel__link">Materiali riciclati</span></a></li>
+                      <li><a href="#"><span class="pubb-panel__link">Dove lo butto?</span></a></li>
+                      <li>
+                          <a href="#"><span class="pubb-panel__link">Calendario 2017</span></a>
+                          <ul class="menu vertical nested">
+                              <li><a href="#"><span class="pubb-panel__link">Zona A</span></a></li>
+                              <li><a href="#"><span class="pubb-panel__link">Zona B</span></a></li>
+                          </ul>
+                      </li>
+                                  <li><a href="#"><span class="pubb-panel__link">Centro di raccolta</span></a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+        <div class="pubb-details js-pubb-details">
+            ciao
+        </div>
+        <div class="body-overlay js-body-overlay"></div>
+        <div class="main-area small-11 columns">
+
+        {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+        {{> body}}
+
+        </div>
+    </div>
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>
