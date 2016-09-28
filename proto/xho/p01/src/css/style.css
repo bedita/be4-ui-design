@@ -182,7 +182,7 @@ body {
             flex-direction: row;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.25); }
     .be4ui-main-container .be4ui-main-header .be4ui-header-toolbar {
-      padding: .5em;
+      padding: .5em 1em;
       -webkit-box-flex: 2;
           -ms-flex-positive: 2;
               flex-grow: 2; }
