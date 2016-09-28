@@ -173,8 +173,19 @@ a {
     }
 }
 .contents-header {
+    position: relative;
     margin-bottom: $global-margin;
     border-bottom: 1px solid;
+}
+.contents-tools {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $medium-gray;
+    span {
+        margin-right: 1em;
+    }
 }
 .contents__list {
     margin: 0;
@@ -195,4 +206,5 @@ a {
     &.content--news { border-left: 4px solid #303F9F; }
     &.content--event { border-left: 4px solid #29B6F6; }
     &.content--media { border-left: 4px solid #E53935; }
+    &.selected { background: $light-gray }
 }

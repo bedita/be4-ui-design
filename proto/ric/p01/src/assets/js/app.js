@@ -56,3 +56,26 @@ $('#checkbox42').change(function(){
 $('#checkbox52').change(function(){
   $('.contents__item.content--media').toggle(this.checked);
 });
+
+var contentsSelected = 0;
+$('.contents__item').click(function(){
+    if ($(this).hasClass('selected')) {
+        $(this).removeClass('selected');
+        contentsSelected--;
+        if(contentsSelected === 0) {
+          $('.contents-tools').hide();
+        }
+    } else {
+        $(this).addClass('selected');
+        contentsSelected++;
+        $('.contents-tools').show();
+    }
+    if(contentsSelected === 1) {
+      $('.js-num-selected').html(contentsSelected + " selezionato");
+      $('.js-tool-single').show();
+    } else {
+      $('.js-num-selected').html(contentsSelected + " selezionati");
+      $('.js-tool-single').hide();
+    }
+
+});
