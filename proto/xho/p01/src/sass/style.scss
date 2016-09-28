@@ -4,6 +4,7 @@
     team: Christiano Presutti, Alberto Pagliarini
     ==========================================================================
 */
+@charset "UTF-8";
 
 /* =========================================================================
    Variables
@@ -41,4 +42,5 @@ $media-narrow-v: "only screen and (max-width: 860px)";
 @import "layout";
 @import "body";
 @import "body_elements";
+@import "typography";
 @import "print";

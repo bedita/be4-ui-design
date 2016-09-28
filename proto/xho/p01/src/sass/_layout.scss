@@ -1,13 +1,9 @@
-@charset "UTF-8";
-
 /* ==========================================================================
-   Main styles
+   Layout
    ========================================================================== */
 
 
 html {
-    font-size: 1em;
-    line-height: 1.4;
     -ms-touch-action: manipulation;
         touch-action: manipulation;
 }
@@ -15,8 +11,6 @@ html {
 body {
     background-color: $mainBgColor;
     color: $mainFgColor;
-    font-family: $ff;
-    font-weight: 300;
     /* safari 9+ only */
     @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
         font-weight: 400;
