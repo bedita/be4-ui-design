@@ -147,16 +147,13 @@ html {
   font-size: 1em;
   line-height: 1.4;
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  height: 100%; }
+  touch-action: manipulation; }
 
 body {
   background-color: #fff;
   color: #222;
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  height: 100%;
-  overflow: hidden;
   /* safari 9+ only */ }
   @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
     body {
@@ -164,21 +161,7 @@ body {
 
 /* MAIN */
 .be4ui-main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%; }
-  .be4ui-main-container .be4ui-body {
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2; }
+  padding-bottom: 4em; }
   .be4ui-main-container .be4ui-main-header, .be4ui-main-container .be4ui-main-footer {
     font-size: .875em;
     background-color: #fff; }
@@ -204,6 +187,9 @@ body {
           -ms-flex-positive: 2;
               flex-grow: 2; }
   .be4ui-main-container .be4ui-main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #666362;
     color: #999; }
 
@@ -217,16 +203,17 @@ body {
     margin-left: 4em;
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
-            flex-grow: 2; }
+            flex-grow: 2;
+    min-width: 16em; }
     .be4ui-body .be4ui-body-view > header {
       margin-bottom: 1em; }
-    .be4ui-body .be4ui-body-view .body-view-element > header {
-      border-bottom: 1px solid #fc7322; }
-    .be4ui-body .be4ui-body-view .body-view-element label {
-      background-color: #fc7322;
-      color: #fff;
-      padding: .125em .5em;
-      font-size: .875em; }
+    .be4ui-body .be4ui-body-view > article {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2;
+      -webkit-column-gap: 2em;
+         -moz-column-gap: 2em;
+              column-gap: 2em; }
 
 .be4ui-body-title {
   font-size: 1.25em;
@@ -255,6 +242,79 @@ body {
   margin-right: .5em;
   line-height: 2em;
   cursor: pointer; }
+
+/* Media Queries */
+@media only screen and (max-width: 860px) {
+  .be4ui-body .be4ui-body-view {
+    margin-left: 2em; }
+    .be4ui-body .be4ui-body-view > article {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
+
+.body-view-element {
+  padding: 1em 0;
+  -webkit-column-break-inside: avoid;
+     page-break-inside: avoid;
+          break-inside: avoid; }
+  .body-view-element > header {
+    border-bottom: 1px solid #fc7322; }
+    .body-view-element > header label {
+      background-color: #fc7322;
+      color: #fff; }
+  .body-view-element label {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: .875em;
+    background-color: #f5f5f5; }
+  .body-view-element label[for] {
+    background-color: transparent;
+    padding-left: .25rem;
+    padding-right: 0;
+    cursor: pointer; }
+  .body-view-element .body-view-element-fieldset {
+    margin: .75em 0; }
+    .body-view-element .body-view-element-fieldset.fieldset-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .body-view-element .body-view-element-fieldset.fieldset-flex input[type=text], .body-view-element .body-view-element-fieldset.fieldset-flex select {
+        text-align: center; }
+    .body-view-element .body-view-element-fieldset input[type=text], .body-view-element .body-view-element-fieldset select {
+      height: 1.75rem;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2;
+      box-sizing: border-box;
+      border: 1px solid #f5f5f5;
+      margin: 0;
+      display: inline-block;
+      padding-left: 1em;
+      padding-right: 1em; }
+    .body-view-element .body-view-element-fieldset select {
+      background-color: transparent;
+      -moz-text-align-last: center;
+           text-align-last: center; }
+    .body-view-element .body-view-element-fieldset input[type=checkbox],
+    .body-view-element .body-view-element-fieldset input[type=radio] {
+      margin-left: 2em; }
+
+/* Media Queries */
+@media only screen and (max-width: 860px) {
+  .body-view-element {
+    padding: 0; } }
 
 /* ==========================================================================
    Print styles

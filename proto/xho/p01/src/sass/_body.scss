@@ -6,22 +6,15 @@
     .be4ui-body-view {
         margin-left: 4em;
         flex-grow: 2;
+        min-width: 16em;
 
         > header {
             margin-bottom: 1em;
         }
 
-        .body-view-element {
-            > header {
-                border-bottom: 1px solid $labelBgColor;
-            }
-
-            label {
-                background-color: $labelBgColor;
-                color: #fff;
-                padding: .125em .5em;
-                font-size: .875em;
-            }
+        > article {
+            column-count: 2;
+            column-gap: 2em;
         }
     }
 }
@@ -54,3 +47,16 @@
     cursor: pointer;
 }
 
+
+/* Media Queries */
+@media #{$media-narrow-v} {
+    .be4ui-body {
+        .be4ui-body-view {
+            margin-left: 2em;
+
+            > article {
+                column-count: 1;
+            }
+        }
+    }
+}

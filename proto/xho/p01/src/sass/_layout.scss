@@ -10,7 +10,6 @@ html {
     line-height: 1.4;
     -ms-touch-action: manipulation;
         touch-action: manipulation;
-    height: 100%;
 }
 
 body {
@@ -18,8 +17,6 @@ body {
     color: $mainFgColor;
     font-family: $ff;
     font-weight: 300;
-    height: 100%;
-    overflow: hidden;
     /* safari 9+ only */
     @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
         font-weight: 400;
@@ -28,14 +25,7 @@ body {
 
 /* MAIN */
 .be4ui-main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-    .be4ui-body {
-        flex-grow: 2;
-    }
+    padding-bottom: 4em; // just here for the footer fixed that will be removed
 
     .be4ui-main-header, .be4ui-main-footer {
         font-size: .875em;
@@ -62,7 +52,11 @@ body {
             flex-grow: 2;
         }
     }
+
     .be4ui-main-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         background-color: #666362;
         color: #999;
     }
