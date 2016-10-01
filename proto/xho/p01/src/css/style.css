@@ -89,7 +89,7 @@ a {
 .helper-transparent {
   opacity: 0; }
 
-.helper-full-absolute {
+.helper-full-absolute, .be4ui-drawer {
   position: absolute;
   top: 0;
   left: 0;
@@ -166,7 +166,15 @@ body {
 
 /* MAIN */
 .be4ui-main-container {
-  padding-bottom: 4em; }
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding-bottom: 3em;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 100% -20%;
+          perspective-origin: 100% -20%; }
   .be4ui-main-container .be4ui-main-header, .be4ui-main-container .be4ui-main-footer {
     font-size: .875em;
     background-color: #fff; }
@@ -235,21 +243,28 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .be4ui-body-toolbar .be4ui-button {
+  .be4ui-body-toolbar .be4ui-circle-button {
     margin-bottom: 1em; }
 
 .be4ui-button {
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: 1em;
-  width: 2em;
-  height: 2em;
-  background-color: #222;
-  color: #fff;
-  margin-right: .5em;
-  line-height: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer; }
+  .be4ui-button label {
+    cursor: pointer; }
+  .be4ui-button.be4ui-circle-button {
+    border-radius: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: #222;
+    color: #fff;
+    margin-right: .5em;
+    line-height: 2em; }
 
 /* Media Queries */
 @media only screen and (max-width: 860px) {
@@ -345,6 +360,55 @@ body {
 @media only screen and (max-width: 860px) {
   .body-view-element {
     padding: 0; } }
+
+.be4ui-drawer {
+  width: 50%;
+  left: auto;
+  right: 0;
+  z-index: 100;
+  background: #217286 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCF6CYhWw2WAynEpgjmIpg7jUlSiM0TWK2GWUOUZ7ApxggeogIcABHJFtftKVfJAAAAAElFTkSuQmCC) repeat;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  font-size: .875em;
+  font-size: 5em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .be4ui-drawer.be4ui-drawer-opened {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.85);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0); }
+    .be4ui-drawer.be4ui-drawer-opened:hover {
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.85); }
+
+.be4ui-drawer-toggle-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 0 2em;
+  line-height: 2.25rem;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: right .3s ease-in-out;
+  transition: right .3s ease-in-out; }
+  .be4ui-drawer-toggle-button.be4ui-drawer-opened {
+    right: 50%; }
 
 /* ==========================================================================
    Typography

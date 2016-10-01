@@ -19,7 +19,14 @@ body {
 
 /* MAIN */
 .be4ui-main-container {
-    padding-bottom: 4em; // just here for the footer fixed that will be removed
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-bottom: 3em; // just here for the footer fixed that will be removed
+
+    perspective: 1000px;
+    perspective-origin: 100% -20%;
 
     .be4ui-main-header, .be4ui-main-footer {
         font-size: .875em;

@@ -1,0 +1,53 @@
+.be4ui-drawer {
+    @extend .helper-full-absolute;
+    width: 50%;
+    left: auto;
+    right: 0;
+    z-index: 100;
+
+    background: #217286 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCF6CYhWw2WAynEpgjmIpg7jUlSiM0TWK2GWUOUZ7ApxggeogIcABHJFtftKVfJAAAAAElFTkSuQmCC) repeat;
+    box-shadow: 0 0 0 rgba(0, 0, 0, .25);
+    // margin-left: 1em; // hide shadow when hidden
+
+    // transform: translateX(100%);
+    transform: rotateY(90deg);
+    transform-origin: right;
+    transition: all .4s ease-in-out;
+    font-size: .875em;
+
+    font-size: 5em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &.be4ui-drawer-opened {
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .85);
+        // transform: translateX(0);
+        transform: rotateY(0);
+
+        &:hover {
+            box-shadow: 0 0 2rem rgba(0, 0, 0, .85);
+        }
+    }
+}
+
+.be4ui-drawer-toggle-button {
+    position: absolute;
+    top:0;
+    right: 0;
+    display: inline-block;
+    padding: 0 2em;
+    line-height: 2.25rem;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+
+    transition: right .3s ease-in-out;
+    &.be4ui-drawer-opened {
+        right: 50%;
+    }
+}
