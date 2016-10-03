@@ -5,13 +5,18 @@
 .body-view-element {
     padding: 1em 0;
     break-inside: avoid;
+    perspective: 600px;
+    perspective-origin: top;
 
     > header {
         border-bottom: 1px solid $labelBgColor;
+        transition: all .4s;
 
         label {
             background-color: $labelBgColor;
             color: #fff;
+            cursor: pointer;
+            transition: background-color .4s;
         }
     }
 
@@ -47,6 +52,14 @@
         font-family: Lato, sans-serif;
         color: #eee;
         cursor: pointer;
+    }
+
+    .body-view-element-fieldsets-container {
+        overflow-y: hidden;
+        opacity: 1;
+        transform: rotateX(0);
+        transform-origin: top;
+        transition: all .4s;
     }
 
     .body-view-element-fieldset {
@@ -90,6 +103,23 @@
     &.body-view-element-custom-properties {
         label:first-child {
             flex-basis: 10em;
+        }
+    }
+
+    &.body-view-element-fieldsets-container-hidden {
+        > header {
+            border-bottom: 1px solid #ccc;
+
+            label {
+                background-color: #ccc;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+        .body-view-element-fieldsets-container {
+            transform: rotateX(-90deg);
+            height: 0 !important;
+            opacity: .75;
         }
     }
 }

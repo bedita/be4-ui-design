@@ -89,7 +89,7 @@ a {
 .helper-transparent {
   opacity: 0; }
 
-.helper-full-absolute, .be4ui-drawer {
+.helper-full-absolute, .be4ui-drawer-container, .be4ui-drawer-container .be4ui-drawer {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,11 +170,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-  padding-bottom: 3em;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-perspective-origin: 100% -20%;
-          perspective-origin: 100% -20%; }
+  padding-bottom: 3em; }
   .be4ui-main-container .be4ui-main-header, .be4ui-main-container .be4ui-main-footer {
     font-size: .875em;
     background-color: #fff; }
@@ -282,12 +278,21 @@ body {
   padding: 1em 0;
   -webkit-column-break-inside: avoid;
      page-break-inside: avoid;
-          break-inside: avoid; }
+          break-inside: avoid;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  -webkit-perspective-origin: top;
+          perspective-origin: top; }
   .body-view-element > header {
-    border-bottom: 1px solid #fc7322; }
+    border-bottom: 1px solid #fc7322;
+    -webkit-transition: all .4s;
+    transition: all .4s; }
     .body-view-element > header label {
       background-color: #fc7322;
-      color: #fff; }
+      color: #fff;
+      cursor: pointer;
+      -webkit-transition: background-color .4s;
+      transition: background-color .4s; }
   .body-view-element label {
     display: inline-block;
     box-sizing: border-box;
@@ -316,6 +321,15 @@ body {
     font-family: Lato, sans-serif;
     color: #eee;
     cursor: pointer; }
+  .body-view-element .body-view-element-fieldsets-container {
+    overflow-y: hidden;
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition: all .4s;
+    transition: all .4s; }
   .body-view-element .body-view-element-fieldset {
     margin: .75em 0; }
     .body-view-element .body-view-element-fieldset.fieldset-flex {
@@ -355,60 +369,75 @@ body {
   .body-view-element.body-view-element-custom-properties label:first-child {
     -ms-flex-preferred-size: 10em;
         flex-basis: 10em; }
+  .body-view-element.body-view-element-fieldsets-container-hidden > header {
+    border-bottom: 1px solid #ccc; }
+    .body-view-element.body-view-element-fieldsets-container-hidden > header label {
+      background-color: #ccc;
+      color: #fff;
+      cursor: pointer; }
+  .body-view-element.body-view-element-fieldsets-container-hidden .body-view-element-fieldsets-container {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    height: 0 !important;
+    opacity: .75; }
 
 /* Media Queries */
 @media only screen and (max-width: 860px) {
   .body-view-element {
     padding: 0; } }
 
-.be4ui-drawer {
-  width: 50%;
+.be4ui-drawer-container {
+  right: 0;
   left: auto;
-  right: 0;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 100% -20%;
+          perspective-origin: 100% -20%;
+  width: 0;
   z-index: 100;
-  background: #217286 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCF6CYhWw2WAynEpgjmIpg7jUlSiM0TWK2GWUOUZ7ApxggeogIcABHJFtftKVfJAAAAAElFTkSuQmCC) repeat;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
-  -webkit-transform: rotateY(90deg);
-          transform: rotateY(90deg);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  font-size: .875em;
-  font-size: 5em;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .be4ui-drawer.be4ui-drawer-opened {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.85);
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0); }
-    .be4ui-drawer.be4ui-drawer-opened:hover {
-      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.85); }
-
-.be4ui-drawer-toggle-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  padding: 0 2em;
-  line-height: 2.25rem;
-  background-color: #222;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: right .3s ease-in-out;
-  transition: right .3s ease-in-out; }
-  .be4ui-drawer-toggle-button.be4ui-drawer-opened {
-    right: 50%; }
+  overflow-x: visible;
+  -webkit-transition: width 1.5s;
+  transition: width 1.5s; }
+  .be4ui-drawer-container .be4ui-drawer {
+    left: auto;
+    right: 0;
+    width: 50%;
+    overflow-x: hidden;
+    background: #217286 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2NkYGAwZmBgOMuAACA+CKCIMSIpADGRNaEYgKwQ3WQUjTCF6CYhWw2WAynEpgjmIpg7jUlSiM0TWK2GWUOUZ7ApxggeogIcABHJFtftKVfJAAAAAElFTkSuQmCC) repeat;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-size: .875em;
+    text-align: center; }
+  .be4ui-drawer-container .button-toggle-drawer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    padding: 0 2em;
+    line-height: 2.25rem;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-transition: right .3s ease-in-out;
+    transition: right .3s ease-in-out; }
+  .be4ui-drawer-container.be4ui-drawer-visibile {
+    width: 100%;
+    -webkit-transition: none;
+    transition: none; }
+    .be4ui-drawer-container.be4ui-drawer-visibile .be4ui-drawer {
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.85);
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0); }
+      .be4ui-drawer-container.be4ui-drawer-visibile .be4ui-drawer:hover {
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.85); }
+    .be4ui-drawer-container.be4ui-drawer-visibile .button-toggle-drawer {
+      right: 50%; }
 
 /* ==========================================================================
    Typography
