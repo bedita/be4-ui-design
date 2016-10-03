@@ -50,7 +50,6 @@
 
         .be4ui-drawer {
             box-shadow: 0 0 1rem rgba(0, 0, 0, .85);
-            // transform: translateX(0);
             transform: rotateY(0);
 
             &:hover {
@@ -60,6 +59,18 @@
 
         .button-toggle-drawer {
             right: 50%;
+        }
+    }
+
+    &.no3d {
+        .be4ui-drawer {
+            transform: translateX(100%);
+            transition: all .3s ease-in-out;
+        }
+        &.be4ui-drawer-visibile {
+            .be4ui-drawer {
+                transform: translateX(0);
+            }
         }
     }
 }

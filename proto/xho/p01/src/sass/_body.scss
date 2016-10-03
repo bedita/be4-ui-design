@@ -34,6 +34,9 @@
 
     .be4ui-circle-button {
         margin-bottom: 1em;
+        &.active {
+            background-color: #fc7322;
+        }
     }
 }
 

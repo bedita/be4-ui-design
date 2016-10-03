@@ -14,6 +14,14 @@ var be4ui = {
             var el = $(this).closest('.body-view-element');
             el.toggleClass('body-view-element-fieldsets-container-hidden');
         });
+
+        $('.be4ui-main-container').on('click', '.js-button-toggle-3d', function() {
+            $(this).toggleClass('active');
+            $('.be4ui-drawer-container').toggleClass('no3d');
+            $('.body-view-element').each(function() {
+                $(this).toggleClass('no3d');
+            });
+        });
     }
 };
 

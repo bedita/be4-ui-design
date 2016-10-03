@@ -241,6 +241,8 @@ body {
           flex-direction: column; }
   .be4ui-body-toolbar .be4ui-circle-button {
     margin-bottom: 1em; }
+    .be4ui-body-toolbar .be4ui-circle-button.active {
+      background-color: #fc7322; }
 
 .be4ui-button {
   margin: 0;
@@ -278,11 +280,7 @@ body {
   padding: 1em 0;
   -webkit-column-break-inside: avoid;
      page-break-inside: avoid;
-          break-inside: avoid;
-  -webkit-perspective: 600px;
-          perspective: 600px;
-  -webkit-perspective-origin: top;
-          perspective-origin: top; }
+          break-inside: avoid; }
   .body-view-element > header {
     border-bottom: 1px solid #fc7322;
     -webkit-transition: all .4s;
@@ -366,20 +364,31 @@ body {
     .body-view-element .body-view-element-fieldset input[type=checkbox],
     .body-view-element .body-view-element-fieldset input[type=radio] {
       margin-left: 2em; }
+  .body-view-element.body-view-element-fieldsets-container-hidden {
+    -webkit-perspective: 600px;
+            perspective: 600px;
+    -webkit-perspective-origin: top;
+            perspective-origin: top; }
+    .body-view-element.body-view-element-fieldsets-container-hidden > header {
+      border-bottom: 1px solid #ccc; }
+      .body-view-element.body-view-element-fieldsets-container-hidden > header label {
+        background-color: #ccc;
+        color: #fff;
+        cursor: pointer; }
+    .body-view-element.body-view-element-fieldsets-container-hidden .body-view-element-fieldsets-container {
+      -webkit-transform: rotateX(-90deg);
+              transform: rotateX(-90deg);
+      height: 0 !important;
+      opacity: .75; }
   .body-view-element.body-view-element-custom-properties label:first-child {
     -ms-flex-preferred-size: 10em;
         flex-basis: 10em; }
-  .body-view-element.body-view-element-fieldsets-container-hidden > header {
-    border-bottom: 1px solid #ccc; }
-    .body-view-element.body-view-element-fieldsets-container-hidden > header label {
-      background-color: #ccc;
-      color: #fff;
-      cursor: pointer; }
-  .body-view-element.body-view-element-fieldsets-container-hidden .body-view-element-fieldsets-container {
-    -webkit-transform: rotateX(-90deg);
-            transform: rotateX(-90deg);
-    height: 0 !important;
-    opacity: .75; }
+
+.body-view-element.no3d.body-view-element-fieldsets-container-hidden .body-view-element-fieldsets-container {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s; }
 
 /* Media Queries */
 @media only screen and (max-width: 860px) {
@@ -438,6 +447,14 @@ body {
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.85); }
     .be4ui-drawer-container.be4ui-drawer-visibile .button-toggle-drawer {
       right: 50%; }
+  .be4ui-drawer-container.no3d .be4ui-drawer {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+  .be4ui-drawer-container.no3d.be4ui-drawer-visibile .be4ui-drawer {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
 
 /* ==========================================================================
    Typography

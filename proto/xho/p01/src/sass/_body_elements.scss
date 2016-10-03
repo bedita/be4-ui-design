@@ -5,8 +5,6 @@
 .body-view-element {
     padding: 1em 0;
     break-inside: avoid;
-    perspective: 600px;
-    perspective-origin: top;
 
     > header {
         border-bottom: 1px solid $labelBgColor;
@@ -100,13 +98,10 @@
         }
     }
 
-    &.body-view-element-custom-properties {
-        label:first-child {
-            flex-basis: 10em;
-        }
-    }
-
     &.body-view-element-fieldsets-container-hidden {
+        perspective: 600px;
+        perspective-origin: top;
+
         > header {
             border-bottom: 1px solid #ccc;
 
@@ -122,9 +117,27 @@
             opacity: .75;
         }
     }
+
+
+    // specific elements' classes
+    &.body-view-element-custom-properties {
+        label:first-child {
+            flex-basis: 10em;
+        }
+    }
 }
 
 
+
+// 3D
+.body-view-element.no3d {
+    &.body-view-element-fieldsets-container-hidden {
+        .body-view-element-fieldsets-container {
+            transform: scaleY(0);
+            transition-duration: .3s;
+        }
+    }
+}
 
 /* Media Queries */
 @media #{$media-narrow-v} {
