@@ -59,6 +59,9 @@ $('#checkbox52').change(function(){
 
 var contentsSelected = 0;
 $('.contents__item').click(function(){
+    if( $('.drawer').hasClass('drawer--show') ){
+        $('.drawer').removeClass('drawer--show');
+    }
     if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
         contentsSelected--;
@@ -79,3 +82,32 @@ $('.contents__item').click(function(){
     }
 
 });
+
+$('.contents__link').click(function(e){
+    e.stopPropagation();
+//    $('.contents__item').each(function(){
+//        if( $(this).hasClass('selected') ){
+//            $(this).removeClass('selected');
+//        }
+//    });
+//    contentsSelected = 0;
+//    $('.contents-tools').hide();
+//    $('.drawer').addClass('drawer--show');
+});
+
+$('.add-multimedia').click(function(e){
+    e.stopPropagation();
+    $('.drawer').addClass('drawer--show');
+});
+
+$('.main-area').click(function(e){
+    e.stopPropagation();
+    if($('.drawer').hasClass('drawer--show')){
+        $('.drawer').removeClass('drawer--show');
+    }
+});
+
+
+
+
+

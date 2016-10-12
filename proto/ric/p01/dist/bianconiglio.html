@@ -85,73 +85,76 @@
         
 
         <div class="main-area small-11 columns">
-            <div class="contents">
-              <h1>Contenuti</h1>
-              <div class="row">
-                <fieldset class="fieldset">
-                  <legend>Tipologia di contenuto</legend>
-            <!--
-                  <input id="checkbox12" type="checkbox" checked>
-                  <label for="checkbox12">Tutti</label>
-            -->
-                  <input id="checkbox22" type="checkbox" checked>
-                  <label for="checkbox22">Documenti (2)</label>
-                  <input id="checkbox32" type="checkbox" checked>
-                  <label for="checkbox32">News (3)</label>
-                  <input id="checkbox42" type="checkbox" checked>
-                  <label for="checkbox42">Eventi (1)</label>
-                  <input id="checkbox52" type="checkbox" checked>
-                  <label for="checkbox52">Multimedia (1)</label>
-                </fieldset>
-              </div>
-              <div class="row collapse">
-                  <div class="small-5 columns">
-                      <label>Posizione
-                          <select>
-                            <option value="husker">Tutte le pubblicazioni</option>
-                            <option value="husker">Alice nel paese delle meraviglie</option>
-                            <option value="starbuck">Il GGG</option>
-                            <option value="hotdog">Sito La Casa di Giovanni</option>
-                            <option value="apollo">Calendario San Giacomo 2017</option>
+
+            <div class="row collapse">
+
+                <div class="contents-index small-2 columns">
+                    <a href="index.html"><svg class="svg-icon" viewBox="0 0 20 20">
+                            <path fill="none" d="M8.388,10.049l4.76-4.873c0.303-0.31,0.297-0.804-0.012-1.105c-0.309-0.304-0.803-0.293-1.105,0.012L6.726,9.516c-0.303,0.31-0.296,0.805,0.012,1.105l5.433,5.307c0.152,0.148,0.35,0.223,0.547,0.223c0.203,0,0.406-0.08,0.559-0.236c0.303-0.309,0.295-0.803-0.012-1.104L8.388,10.049z"></path>
+                        </svg></a>
+                    <hr>
+                    <ul class="menu vertical">
+                        <li><a href="#">Titolo</a></li>
+                        <li><a href="#">Descrizione</a></li>
+                        <li><a href="#">Proprietà</a></li>
+                        <li><a href="#">Posizione</a></li>
+                        <li><a href="#">Multimedia</a></li>
+                        <li><a href="#">Permessi</a></li>
+                    </ul>
+                </div>
+
+                <div class="contents small-10 columns" style="border-top: 8px solid #F57C00">
+                    <div style="color: #F57C00">Documento</div>
+
+                    <h3>Il Bianconiglio non è mai esistito</h3>
+
+                    <label>
+                      Titolo
+                      <input type="text" placeholder="Il Bianconiglio non è mai esistito">
+                    </label>
+
+                    <label>
+                      Descrizione
+                      <textarea placeholder=""></textarea>
+                    </label>
+
+                    <label>Proprietà</label>
+                    <div class="row collapse">
+                      <fieldset class="large-6 columns">
+                        <legend>Stato</legend>
+                        <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">On</label>
+                        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Off</label>
+                      </fieldset>
+                      <fieldset class="large-6 columns">
+                        <legend>Check these out</legend>
+                        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                        <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+                      </fieldset>
+                    </div>
+
+                    <label>Posizione
+                        <select>
+                            <option value="husker">Husker</option>
+                            <option value="starbuck">Starbuck</option>
+                            <option value="hotdog">Hot Dog</option>
+                            <option value="apollo">Apollo</option>
                           </select>
-                      </label>
-                  </div>
-                  <div class="small-5 columns">
-                  <label for="contents-search" class="text-left">Cerca una parola</label>
-                  <div class="input-group">
-                      <!-- <span class="input-group-label">Cerca</span> -->
-                      <input class="input-group-field" type="text" id="contents-search">
-                      <div class="input-group-button">
-                          <input type="submit" class="button" value="Cerca">
-                      </div>
-                  </div>
-                  </div>
-              </div>
-            
-              <div class="contents-header">
-                  Titolo
-                  <div class="contents-tools">
-                      <span class="js-num-selected">1 selezionato</span>
-                      <span class="js-tool-single">Apri</span>
-                      <span>Elimina...</span>
-                      <span class="js-tool-single">Rinomina</span>
-                      <span>Posizione...</span>
-                      <span>Duplica</span>
-                  </div>
-              </div>
-            
-              <ul class="contents__list">
-                <li class="contents__item content--doc"><a href="bianconiglio.html" class="contents__link">Il Bianconiglio non è mai esistito</a></li>
-                <li class="contents__item content--doc"><a href="#" class="contents__link">Prefazione alla versione italiana</a></li>
-                <li class="contents__item content--news"><a href="nuovo-bando.html" class="contents__link">Esce oggi il nuovo bando</a></li>
-                <li class="contents__item content--event"><a href="festival.html" class="contents__link">Festival in piazza</a></li>
-                <li class="contents__item content--news"><a href="#" class="contents__link">Da domani le bollette si trovano online!</a></li>
-                <li class="contents__item content--news"><a href="#" class="contents__link">Sciopero CGIL</a></li>
-                <li class="contents__item content--media"><a href="#" class="contents__link">merged_document_vinilificio-9dad9a.jpg</a></li>
-              </ul>
+                   </label>
+
+                    <label>Multimedia</label>
+                    <a href="#" class="add-multimedia button small">Aggiungi</a>
+
+                    <label>Permessi</label>
+                </div>
+
+
             </div>
-            
         </div>
+    </div>
+
+    <div class="drawer">
+        ABC
     </div>
 
     <script src="assets/js/app.js"></script>

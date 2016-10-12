@@ -50,29 +50,7 @@
 @include motion-ui-animations;
 
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
 
-.svg-icon {
-  width: 2em;
-  height: 2em;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #fff;
-}
-
-.svg-icon circle {
-  stroke: #fff;
-  stroke-width: 1;
-}
-
-.fieldset legend {
-    background: transparent !important;
-}
 
 $transition-all: all 250ms ease-in-out;
 
@@ -208,3 +186,62 @@ a {
     &.content--media { border-left: 4px solid #E53935; }
     &.selected { background: $light-gray }
 }
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    width: 50vw;
+    background: $white;
+    z-index: 1;
+    height: 100vh;
+    transition: $transition-all;
+}
+.drawer--show {
+    right: 0;
+}
+
+
+
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.fieldset legend {
+    background: transparent !important;
+}
+
+
+.main-area {
+    .svg-icon {
+        font-size: 2em;
+    }
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+      fill: map-get($foundation-palette, primary);
+    }
+
+    .svg-icon circle {
+      stroke: map-get($foundation-palette, primary);
+      stroke-width: 1;
+    }
+}
+
